@@ -1,4 +1,4 @@
-# 🛒 Simple POS System — Laravel 10
+# 🛒 Simple POS System — Laravel 12
 
 A lightweight Inventory System built with **Laravel 12**, supporting product management, sales, payments, journal entries, and reports with clean, clean MVC + Service-based architecture
 
