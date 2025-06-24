@@ -1,0 +1,211 @@
+// Mixin
+@mixin flex-box(
+    $display,
+    $align-items: null,
+    $justify-content: null,
+    $gap: null
+) {
+    display: $display;
+    @if $align-items {
+        align-items: $align-items;
+    }
+    @if $justify-content {
+        justify-content: $justify-content;
+    }
+    @if $gap {
+        gap: $gap;
+    }
+}
+
+/* {{-- Data Table  --}} */
+div.dataTables_wrapper div.dataTables_length select {
+    min-height: 20px !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 5px !important;
+    height: 25px;
+    font-size: 11px;
+    line-height: 1;
+    background-position: right 1px center;
+    background-size: 1.2em 1.2em;
+    padding: 4px 15px 4px 6px;
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #dee2e6;
+}
+table.dataTable {
+    padding-top: 20px !important;
+    border-collapse: collapse;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #dee2e6;
+}
+div.dataTables_processing > div:last-child > div {
+    background: #f0f1f7 !important;
+}
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 5px !important;
+    margin-left: 5px !important;
+    height: 28px !important;
+}
+table.dataTable th {
+    height: 20px !important;
+    vertical-align: middle;
+}
+table.dataTable td {
+    height: 20px;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #333335;
+    font-weight: 400 !important;
+}
+table.dataTable td > a {
+    margin-right: 5px;
+}
+table.dataTable.table thead th.sorting:after,
+table.dataTable.table thead td.sorting:after {
+    display: none;
+}
+table.dataTable tbody tr td .action-btn {
+    display: flex;
+}
+table.dataTable tbody tr td a {
+    text-decoration: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    @include flex-box(flex, center, center);
+    transition: all 0.3s ease-in-out;
+}
+table.dataTable tbody tr td .btn-show {
+    margin-left: 5px;
+    color: #5adf73;
+    background-color: #eefcf2;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    @include flex-box(flex, center, center);
+    &.btn-checked {
+        color: #5adf5a;
+        background-color: #eefcf0;
+        &:hover {
+            color: #fff;
+            background-color: #5adf5a;
+        }
+    }
+}
+table.dataTable tbody tr td .btn-edit {
+    color: #845adf;
+    background-color: #f2eefc;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    @include flex-box(flex, center, center);
+    &.btn-checked {
+        color: #5adf5a;
+        background-color: #eefcf0;
+        &:hover {
+            color: #fff;
+            background-color: #5adf5a;
+        }
+    }
+}
+table.dataTable tbody tr td .btn-edit:hover {
+    color: #fff;
+    background-color: #845adf;
+}
+table.dataTable tbody tr td .btn-show:hover {
+    color: #fff;
+    background-color: #5adf5a;
+}
+
+table.dataTable tbody tr td .btn-delete {
+    color: #dc3545;
+    background-color: #f3d1d4;
+    margin-left: 5px;
+    text-decoration: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    @include flex-box(flex, center, center);
+    transition: all 0.3s ease-in-out;
+}
+table.dataTable tbody tr td .btn-receipt {
+    color: #3546dc;
+    background-color: #d1d6f3;
+    margin-left: 5px;
+    text-decoration: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    @include flex-box(flex, center, center);
+    transition: all 0.3s ease-in-out;
+}
+table.dataTable tbody tr td .btn-delete:hover {
+    color: #fff;
+    background-color: #dc3545;
+}
+table.dataTable tbody tr td .btn-receipt:hover {
+    color: #fff;
+    background-color: #3546dc;
+}
+
+table.dataTable tbody tr td a:focus,
+table.dataTable tbody tr td a:hover {
+    color: #11101d;
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 13px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+.dataTables_length label,
+.dataTables_filter label {
+    font-size: 13px;
+}
+.dataTables_filter label input {
+    border: 1px solid #dee2e6 !important;
+    font-size: 13px !important;
+    margin-bottom: 10px;
+}
+.dataTables_filter label input:focus-visible {
+    outline: none;
+}
+.dataTables_paginate.paging_simple_numbers {
+    padding-top: 13px !important;
+}
+.dataTables_paginate.paging_simple_numbers > a {
+    font-size: 13px;
+    color: #666;
+    margin: 0 5px;
+    cursor: pointer !important;
+}
+.dataTables_paginate.paging_simple_numbers span .paginate_button {
+    font-size: 11px !important;
+    margin: 0 5px !important;
+    color: #11101d !important;
+    background: #fff !important;
+    padding: 5px 12px !important;
+    border-radius: 5px !important;
+    border: 1px solid #dee2e6 !important;
+    transition: all 0.3s ease-in-out;
+}
+.dataTables_paginate.paging_simple_numbers span .paginate_button:hover {
+    background: initial !important;
+    background: #f2f2f2 !important;
+}
+.dataTables_paginate.paging_simple_numbers span .paginate_button.current {
+    background: #f2f2f2 !important;
+}
+.dataTables_paginate.paging_simple_numbers .paginate_button:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    padding: 6px 6px !important;
+}
