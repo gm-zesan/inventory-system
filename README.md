@@ -4,6 +4,23 @@ A lightweight Inventory & Financial Reporting System built with **Laravel 12**, 
 
 ---
 
+## Live Demo Link
+
+- 🌐 URL: http://inventory-system.deshicreative.com/
+
+
+---
+
+
+## 🔐 Admin Panel Access (Demo)
+
+- 📧 Email: gmzesan7767@gmail.com
+- 🔑 Password: 12345678aA
+
+
+---
+
+
 ## 🚀 Features
 
 - Product management (CRUD)
